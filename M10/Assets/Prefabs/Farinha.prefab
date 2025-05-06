@@ -91,3 +91,5 @@ MonoBehaviour:
   imageitem: {fileID: 3425876655380574776}
   parentSlot: {fileID: 0}
   itemsScriptables: {fileID: 11400000, guid: 0a5effc65aa033f44b24bb3025cc8e9f, type: 2}
+  podeInstanciar: 1
+  combinationManager: {fileID: 11400000, guid: 167fd24bd4ef26a47a179d776223d60f, type: 2}
