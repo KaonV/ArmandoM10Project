@@ -9,7 +9,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginD
     public Image imageitem;
     [HideInInspector] public Transform parentSlot;
     public ItemsScriptables itemsScriptables;
-    [SerializeField] private bool podeInstanciar = true;
+    [SerializeField] public bool podeInstanciar = true;
     [SerializeField] private CombinationManager combinationManager;
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -39,52 +39,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginD
         imageitem.raycastTarget = true;
         transform.SetParent(parentSlot);
 
-        // Faz o raycast para detectar o que está debaixo do mouse
-        PointerEventData pointerData = new PointerEventData(EventSystem.current)
-        {
-            position = Input.mousePosition
-        };
-
-        var results = new System.Collections.Generic.List<RaycastResult>();
-        EventSystem.current.RaycastAll(pointerData, results);
-
-        foreach (var result in results)
-        {
-            var outroItem = result.gameObject.GetComponent<DragAndDrop>();
-            if (outroItem != null && outroItem != this)
-            {
-                var resultado = combinationManager.VerificarCombinacao(this.itemsScriptables, outroItem.itemsScriptables);
-                if (resultado != null)
-                {
-                    // Posição média entre os dois itens
-                    Vector2 mediaTela = (RectTransformUtility.WorldToScreenPoint(null, this.transform.position) +
-                                         RectTransformUtility.WorldToScreenPoint(null, outroItem.transform.position)) / 2f;
-
-                    RectTransform canvasRect = transform.root.GetComponent<RectTransform>();
-                    RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, mediaTela, null, out Vector2 posLocal);
-
-                    // Destroi os itens antigos
-                    Destroy(this.gameObject);
-                    Destroy(outroItem.gameObject);
-
-                    // Instancia o novo item **sem parent**
-                    GameObject novoItem = Instantiate(resultado.itemPrefab, transform.root);  // Não definindo parent específico
-                    RectTransform novoRect = novoItem.GetComponent<RectTransform>();
-                    novoRect.anchoredPosition = posLocal;  // Coloca na posição calculada
-
-                    // Ajusta o script de arrasto
-                    var dragScript = novoItem.GetComponent<DragAndDrop>();
-                    if (dragScript != null)
-                    {
-                        dragScript.itemsScriptables = resultado;
-                        dragScript.podeInstanciar = false;
-                    }
-
-                    return;
-                }
-            }
-        }
-
+       
      
 
         // Instancia no mundo se puder
@@ -101,7 +56,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginD
                 dragScript.podeInstanciar = false;
         }
 
-        //transform.SetParent(parentSlot);
+      
     }
 
 

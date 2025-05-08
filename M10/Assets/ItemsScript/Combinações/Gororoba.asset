@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f14c83961fbd648bb55fc7582b5476, type: 3}
+  m_Name: Gororoba
+  m_EditorClassIdentifier: 
+  itemA: {fileID: 11400000, guid: ca8771e24db881e488a5cbe2e0e3d9f3, type: 2}
+  itemB: {fileID: 0}
+  resultado: {fileID: 11400000, guid: a3488ae9f843e7f4d9eae92b6abf8712, type: 2}

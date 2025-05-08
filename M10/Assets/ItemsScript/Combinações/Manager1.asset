@@ -16,3 +16,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 03755ba2edd57b440bb031f721e405aa, type: 2}
   - {fileID: 11400000, guid: 89421c63ef9ddff4fb74794b23ce54cb, type: 2}
   - {fileID: 11400000, guid: 0cf99a7bfca064a4082a0f4353618bc0, type: 2}
+  - {fileID: 11400000, guid: a892308180dec744eab02a82149a5d30, type: 2}
+  receitaPadrao: {fileID: 11400000, guid: a3488ae9f843e7f4d9eae92b6abf8712, type: 2}
