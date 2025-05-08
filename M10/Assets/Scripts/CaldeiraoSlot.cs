@@ -9,12 +9,13 @@ public class CaldeiraoSlot : MonoBehaviour
     // Adiciona o item ao slot
     public void AdicionarItem(DragAndDrop item)
     {
-        if (itemOcupando != null)
+        if (itemOcupando != null && itemOcupando != item)
         {
-            // Se o slot já estiver ocupado, limpamos primeiro
-            Limpar();
+            itemOcupando.transform.SetParent(null); 
         }
 
+
+        //faz o novo item virar filho do slot na hierarquia
         itemOcupando = item;
         item.transform.SetParent(transform);
         item.transform.localPosition = Vector3.zero;
@@ -25,8 +26,9 @@ public class CaldeiraoSlot : MonoBehaviour
     {
         if (itemOcupando != null)
         {
-            Destroy(itemOcupando.gameObject); // Destroi o item no slot
-            itemOcupando = null; // Limpa a referência ao item
+            Debug.Log("Destruindo item: " + itemOcupando.name);
+            Destroy(itemOcupando.gameObject); 
+            itemOcupando = null;
         }
     }
 }

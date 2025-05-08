@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 public class CauldronDropZone : MonoBehaviour, IDropHandler
 {
-    public CaldeiraoSlot[] slots; // Atribua via Inspector
+    public CaldeiraoSlot[] slots; 
 
     public void OnDrop(PointerEventData eventData)
     {

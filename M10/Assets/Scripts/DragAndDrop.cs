@@ -14,18 +14,27 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginD
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (podeInstanciar)
+        {
+            
+            eventData.pointerDrag = null;
+            return;
+        }
 
-        //Salva a posição do último parente do Objeto
+        //Relaciona o parent do objeto a variável parentSlot
         parentSlot = transform.parent;
 
-        //Referência ao transform mais alto da hierarquia, objeto que não tem pai (Canvas).
+        //Pega o transform do objeto e seta para o Pai único da hierarquia, assim tirando ele da hierarquia do slot
+        //e colocando no Canvas que é o Pai mais alto.
         transform.SetParent(transform.root);
 
-        //Coloca o objeto como último filho do pai atual 
+        //Seta o objeto para ficar no topo da hierarquia
         transform.SetAsLastSibling();
 
+       
         imageitem.raycastTarget = false;
     }
+
 
 
     public void OnDrag(PointerEventData eventData)
@@ -34,35 +43,63 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginD
         transform.position = Input.mousePosition;
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+  
+      public void OnEndDrag(PointerEventData eventData)
     {
         imageitem.raycastTarget = true;
-        transform.SetParent(parentSlot);
 
-       
-     
+        // Tenta encontrar um novo slot onde o item foi solto
+        GameObject objetoAbaixo = eventData.pointerEnter;
+        CaldeiraoSlot novoSlot = null;
 
-        // Instancia no mundo se puder
-        if (podeInstanciar)
+        if (objetoAbaixo != null)
         {
-            Vector3 mousePosition = Input.mousePosition;
-            GameObject item = Instantiate(itemsScriptables.itemPrefab, mousePosition, Quaternion.identity, transform.root);
-            Debug.Log("O item " + itemsScriptables.nameItem + " foi spawnado");
-
-            item.transform.SetAsLastSibling();
-
-            var dragScript = item.GetComponent<DragAndDrop>();
-            if (dragScript != null)
-                dragScript.podeInstanciar = false;
+            novoSlot = objetoAbaixo.GetComponentInParent<CaldeiraoSlot>();
         }
 
-      
+        if (novoSlot != null)
+        {
+            // Se foi solto num novo slot, adiciona o item lá
+            novoSlot.AdicionarItem(this);
+            parentSlot = novoSlot.transform;
+        }
+        else
+        {
+            // Se não foi solto num slot válido, limpa o antigo
+            if (parentSlot != null)
+            {
+                CaldeiraoSlot slotAntigo = parentSlot.GetComponent<CaldeiraoSlot>();
+                if (slotAntigo != null && slotAntigo.itemOcupando == this)
+                {
+                    slotAntigo.itemOcupando = null;
+                }
+            }
+
+           
+            
+           
+        }
+
     }
+
 
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        
+        if (podeInstanciar)
+        {
+            // Instancia o item na posição do mouse
+            GameObject copia = Instantiate(itemsScriptables.itemPrefab, Input.mousePosition, Quaternion.identity, transform.root);
+            var copiaScript = copia.GetComponent<DragAndDrop>();
+            if (copiaScript != null)
+            {
+                copiaScript.itemsScriptables = this.itemsScriptables;
+                copiaScript.podeInstanciar = false;
+
+                
+             
+            }
+        }
     }
 }
 

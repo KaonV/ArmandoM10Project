@@ -5,6 +5,7 @@ public class CraftarBotao : MonoBehaviour
     public CauldronDropZone cauldron;
     public CombinationManager combinationManager;
     public Transform resultadoSpawnPoint;
+    public CaldeiraoSlot caldeiraoSlot;
 
     public void Craftar()
     {
@@ -44,6 +45,8 @@ public class CraftarBotao : MonoBehaviour
                 dragScript.itemsScriptables = resultado;
                 dragScript.podeInstanciar = false;
             }
+
+          
 
             Debug.Log($"Resultado do craft: {resultado.nameItem}");
         }
