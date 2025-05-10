@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f14c83961fbd648bb55fc7582b5476, type: 3}
+  m_Name: CombTortaGato1
+  m_EditorClassIdentifier: 
+  itemA: {fileID: 11400000, guid: ac7090edcb11a4a4da629c3e8761d33d, type: 2}
+  itemB: {fileID: 11400000, guid: b48ea3aeb00ba6748bee45212cb1b86e, type: 2}
+  resultado: {fileID: 11400000, guid: 64a4350a3a440274cb867d09f2f926d5, type: 2}
