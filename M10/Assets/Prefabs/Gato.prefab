@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3425876655380574776}
   - component: {fileID: -9012954718667680225}
   m_Layer: 5
-  m_Name: Chocolate
+  m_Name: Gato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7936415941445060945, guid: 2f27f468f05b2544aaa05e4221538b0b, type: 3}
+  m_Sprite: {fileID: -5155329453913746789, guid: db7243cf9bbb2b74a8863620cb6ae628, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -90,6 +90,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageitem: {fileID: 3425876655380574776}
   parentSlot: {fileID: 0}
-  itemsScriptables: {fileID: 11400000, guid: f31eb5f87612ca34cae7be75d3382345, type: 2}
+  itemsScriptables: {fileID: 11400000, guid: ac7090edcb11a4a4da629c3e8761d33d, type: 2}
   podeInstanciar: 1
   combinationManager: {fileID: 11400000, guid: 167fd24bd4ef26a47a179d776223d60f, type: 2}

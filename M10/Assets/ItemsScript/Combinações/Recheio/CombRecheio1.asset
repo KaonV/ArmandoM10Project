@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72f14c83961fbd648bb55fc7582b5476, type: 3}
+  m_Name: CombRecheio1
+  m_EditorClassIdentifier: 
+  itemA: {fileID: 11400000, guid: 4e9356ffc3bf8364ab3548be94e5cfbb, type: 2}
+  itemB: {fileID: 11400000, guid: dbed8195aef91a84c993b54284de8b3b, type: 2}
+  resultado: {fileID: 11400000, guid: f27529f4c61f29f48b93f20512db9743, type: 2}
