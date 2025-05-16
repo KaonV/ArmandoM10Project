@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TortaGato_0: -5056347265049551232
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
