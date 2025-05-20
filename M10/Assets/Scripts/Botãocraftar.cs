@@ -82,7 +82,7 @@ public class CraftarBotao : MonoBehaviour
                     Debug.LogWarning("Não foi possível adicionar o item aos slots desbloqueados.");
                 }
             }
-
+                MusicManager.Instance.cookSound.Play();
                 caldeiraoCraftSprite.MostrarSpriteCraftTemporario();
 
             Debug.Log($"Resultado do craft: {resultado.nameItem}");
