@@ -17,6 +17,9 @@ public class CraftarBotao : MonoBehaviour
 
     public CaldeiraoHover caldeiraoCraftSprite;
 
+
+    public UnlockSlotsManager unlockSlotsManager;
+
     /// <summary>
     /// Chamado pelo botão de Craft no Inspector (OnClick)
     /// </summary>
@@ -64,7 +67,23 @@ public class CraftarBotao : MonoBehaviour
                 dragScript.podeInstanciar = false;
             }
 
-            caldeiraoCraftSprite.MostrarSpriteCraftTemporario();
+            if (resultado != null)
+            {
+                // Limpar slots, instanciar item...
+
+                // Adiciona o item no slot desbloqueado
+                bool added = unlockSlotsManager.AddUnlockedItem(resultado);
+                if (added)
+                {
+                    Debug.Log($"Item {resultado.nameItem} adicionado aos slots desbloqueados.");
+                }
+                else
+                {
+                    Debug.LogWarning("Não foi possível adicionar o item aos slots desbloqueados.");
+                }
+            }
+
+                caldeiraoCraftSprite.MostrarSpriteCraftTemporario();
 
             Debug.Log($"Resultado do craft: {resultado.nameItem}");
 
