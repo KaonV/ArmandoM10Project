@@ -5,8 +5,8 @@ public class MenuManager : MonoBehaviour
 {
     private void Update()
     {
-        CreditsExit();
-        GameplayExit();
+       // CreditsExit();
+       // GameplayExit();
     }
 
     public void Gameplay()
@@ -16,10 +16,9 @@ public class MenuManager : MonoBehaviour
 
     public void GameplayExit()
     {
-        if (SceneManager.GetActiveScene().name == "Gameplay" && Input.GetKeyDown(KeyCode.Escape))
-        {
+       
             SceneManager.LoadScene("Menu");
-        }
+        
     }
 
 
@@ -34,6 +33,11 @@ public class MenuManager : MonoBehaviour
         {
             SceneManager.LoadScene("Menu");
         }
+    }
+    public void Menu()
+    {
+            SceneManager.LoadScene("Menu");
+        
     }
 
     public void Exit()

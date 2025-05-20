@@ -2073,11 +2073,10 @@ MonoBehaviour:
   cauldron: {fileID: 2086115387}
   combinationManager: {fileID: 11400000, guid: 167fd24bd4ef26a47a179d776223d60f, type: 2}
   recipeBook: {fileID: 764497161}
-  excludedRecipe: {fileID: 11400000, guid: a3488ae9f843e7f4d9eae92b6abf8712, type: 2}
+  excludedRecipe: {fileID: 11400000, guid: c3eda67483d5b8244b2668db41a7c90d, type: 2}
+  victoryRecipe: {fileID: 11400000, guid: 17e8f167d5effe9479b56e064ca45a6c, type: 2}
   resultadoSpawnPoint: {fileID: 550536334}
   caldeiraoSlot: {fileID: 0}
-  caldeiraoCraftSprite: {fileID: 352241079}
-  unlockSlotsManager: {fileID: 1739078154}
 --- !u!114 &894687772
 MonoBehaviour:
   m_ObjectHideFlags: 0

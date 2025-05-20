@@ -1,31 +1,30 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;  // Se for carregar uma cena de vitória
+// ou usando seu próprio GameManager para win logic
 
 public class CraftarBotao : MonoBehaviour
 {
     [Header("Referências de Sistema")]
-    public CauldronDropZone cauldron;            // Seu componente que guarda os slots do caldeirão
-    public CombinationManager combinationManager;  // ScriptableObject com todas as combinações
-    public RecipeBook recipeBook;          // Componente que gerencia o Livro de Receitas
+    public CauldronDropZone cauldron;
+    public CombinationManager combinationManager;
+    public RecipeBook recipeBook;
 
     [Header("Configuração de Exclusão")]
-    [Tooltip("Arraste aqui o ScriptableObject MacarraoDark para que essa receita NÃO seja registrada")]
-    public ItemsScriptables excludedRecipe;      // Receitas que não devem ir pro livro
+    public ItemsScriptables excludedRecipe;
+
+    [Header("Receita de Vitória")]
+    [Tooltip("Arraste aqui o ScriptableObject que, ao ser craftado, faz o jogador GANHAR")]
+    public ItemsScriptables victoryRecipe;
 
     [Header("Instanciação do Resultado")]
-    public Transform resultadoSpawnPoint; // Onde o novo item vai aparecer
-    public CaldeiraoSlot caldeiraoSlot;       // (opcional, se você usa em outro contexto)
+    public Transform resultadoSpawnPoint;
+    public CaldeiraoSlot caldeiraoSlot;
 
-    public CaldeiraoHover caldeiraoCraftSprite;
+    // (Opcional) se tiver um GameManager com método WinGame()
+    //public GameManager gameManager;
 
-
-    public UnlockSlotsManager unlockSlotsManager;
-
-    /// <summary>
-    /// Chamado pelo botão de Craft no Inspector (OnClick)
-    /// </summary>
     public void Craftar()
     {
-        // 1) Pega os itens dos slots
         var slots = cauldron.slots;
         if (slots.Length < 1 || slots[0].itemOcupando == null)
         {
@@ -38,25 +37,20 @@ public class CraftarBotao : MonoBehaviour
                     ? slots[1].itemOcupando.itemsScriptables
                     : null;
 
-        // 2) Verifica combinação
         var resultado = combinationManager.VerificarCombinacao(itemA, itemB);
         if (resultado == null && combinationManager.receitaPadrao != null)
         {
             resultado = combinationManager.receitaPadrao;
-
-            //MusicManager.Instance.failAudioSound.Play();
-
             Debug.Log("Combinação inválida. Usando receita padrão.");
         }
 
-        // 3) Se houver resultado, limpa slots, instancia item e registra na UI
         if (resultado != null)
         {
-            // Limpa os slots usados
+            // Limpa slots
             slots[0].Limpar();
             if (slots.Length > 1) slots[1].Limpar();
 
-            // Instancia o novo item no mundo/UI
+            // Instancia o novo item
             GameObject novoItem = Instantiate(
                 resultado.itemPrefab,
                 resultadoSpawnPoint.position,
@@ -70,45 +64,20 @@ public class CraftarBotao : MonoBehaviour
                 dragScript.podeInstanciar = false;
             }
 
-
-
-
-
-            if (resultado != null)
-            {
-                // Limpar slots, instanciar item...
-
-                // Adiciona o item no slot desbloqueado
-                bool added = unlockSlotsManager.AddUnlockedItem(resultado);
-                if (added)
-                {
-                   // MusicManager.Instance.newIngredientSound.Play();
-                    Debug.Log($"Item {resultado.nameItem} adicionado aos slots desbloqueados.");
-                }
-                else
-                {
-                    Debug.LogWarning("Não foi possível adicionar o item aos slots desbloqueados.");
-                }
-            }
-               // MusicManager.Instance.cookSound.Play();
-                caldeiraoCraftSprite.MostrarSpriteCraftTemporario();
-
             Debug.Log($"Resultado do craft: {resultado.nameItem}");
 
-
-
-
-
-
-
-            // 4) Registra no livro de receitas somente se NÃO for a receita excluída
+            // Registra no livro, exceto o excluído
             if (resultado != excludedRecipe)
-            {
                 recipeBook.Register(itemA, itemB, resultado);
-            }
-            else
+
+            // ** Verifica vitória **
+            if (resultado == victoryRecipe)
             {
-                Debug.Log($"Receita {resultado.nameItem} excluída do Livro de Receitas.");
+                SceneManager.LoadScene("WinScene");
+                Debug.Log("=== RECEITA FINAL ALCANÇADA! VOCÊ GANHOU! ===");
+
+                
+                
             }
         }
     }
