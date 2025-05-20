@@ -217,9 +217,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 497116283643848343, guid: a129c8b1eb0c333468b1d03181786a92, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3857848305602149516, guid: a129c8b1eb0c333468b1d03181786a92, type: 3}
       propertyPath: m_Name
       value: InventorySlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857848305602149516, guid: a129c8b1eb0c333468b1d03181786a92, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -425,6 +433,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 497116283643848343, guid: a129c8b1eb0c333468b1d03181786a92, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3857848305602149516, guid: a129c8b1eb0c333468b1d03181786a92, type: 3}
       propertyPath: m_Name
       value: InventorySlot (3)
@@ -523,6 +535,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 344115909724575644, guid: a129c8b1eb0c333468b1d03181786a92, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497116283643848343, guid: a129c8b1eb0c333468b1d03181786a92, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3857848305602149516, guid: a129c8b1eb0c333468b1d03181786a92, type: 3}
@@ -1689,6 +1705,7 @@ GameObject:
   - component: {fileID: 894687769}
   - component: {fileID: 894687772}
   - component: {fileID: 894687771}
+  - component: {fileID: 894687773}
   m_Layer: 5
   m_Name: Caldeirao
   m_TagString: Untagged
@@ -1790,7 +1807,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1800,8 +1817,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 1342426923131381457, guid: 0430e71a596b3764a94ce4b5d24b94f3, type: 3}
+    m_PressedSprite: {fileID: 2530832133090126899, guid: 6848c5b95a307a043bf3f9fc494f902a, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -1815,7 +1832,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 894687771}
         m_TargetAssemblyTypeName: CraftarBotao, Assembly-CSharp
         m_MethodName: Craftar
         m_Mode: 1
@@ -1827,6 +1844,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!95 &894687773
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894687767}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 86245ab7cbcb3d045a4afdc15903b88b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &899400113
 GameObject:
   m_ObjectHideFlags: 0
@@ -2922,6 +2961,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 344115909724575644, guid: a129c8b1eb0c333468b1d03181786a92, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497116283643848343, guid: a129c8b1eb0c333468b1d03181786a92, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3857848305602149516, guid: a129c8b1eb0c333468b1d03181786a92, type: 3}

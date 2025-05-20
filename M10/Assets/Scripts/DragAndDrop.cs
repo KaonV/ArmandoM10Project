@@ -74,7 +74,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginD
                     slotAntigo.itemOcupando = null;
                 }
             }
-
+           
            
             
            
