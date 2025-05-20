@@ -43,6 +43,9 @@ public class CraftarBotao : MonoBehaviour
         if (resultado == null && combinationManager.receitaPadrao != null)
         {
             resultado = combinationManager.receitaPadrao;
+
+            MusicManager.Instance.failAudioSound.Play();
+
             Debug.Log("Combinação inválida. Usando receita padrão.");
         }
 
@@ -67,6 +70,10 @@ public class CraftarBotao : MonoBehaviour
                 dragScript.podeInstanciar = false;
             }
 
+
+
+
+
             if (resultado != null)
             {
                 // Limpar slots, instanciar item...
@@ -75,6 +82,7 @@ public class CraftarBotao : MonoBehaviour
                 bool added = unlockSlotsManager.AddUnlockedItem(resultado);
                 if (added)
                 {
+                    MusicManager.Instance.newIngredientSound.Play();
                     Debug.Log($"Item {resultado.nameItem} adicionado aos slots desbloqueados.");
                 }
                 else
@@ -86,6 +94,12 @@ public class CraftarBotao : MonoBehaviour
                 caldeiraoCraftSprite.MostrarSpriteCraftTemporario();
 
             Debug.Log($"Resultado do craft: {resultado.nameItem}");
+
+
+
+
+
+
 
             // 4) Registra no livro de receitas somente se NÃO for a receita excluída
             if (resultado != excludedRecipe)

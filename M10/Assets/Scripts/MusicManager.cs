@@ -6,13 +6,15 @@ public class MusicManager : MonoBehaviour
 
     public AudioSource cookSound;
     public AudioSource musicBase;
+    public AudioSource newIngredientSound;
+    public AudioSource failAudioSound;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-           // DontDestroyOnLoad(gameObject); 
+            DontDestroyOnLoad(gameObject); 
         }
         else
         {
@@ -25,9 +27,19 @@ public class MusicManager : MonoBehaviour
         musicBase.Play();
     }
 
+    private void FailSound()
+    {
+        failAudioSound.Play();
+    }
+
 
     private void CookSound()
     {
         cookSound.Play();
+    }
+
+    private void CookNewIngredient()
+    {
+        newIngredientSound.Play();
     }
 }
