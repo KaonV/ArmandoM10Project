@@ -15,6 +15,8 @@ public class CraftarBotao : MonoBehaviour
     public Transform resultadoSpawnPoint; // Onde o novo item vai aparecer
     public CaldeiraoSlot caldeiraoSlot;       // (opcional, se você usa em outro contexto)
 
+    public CaldeiraoHover caldeiraoCraftSprite;
+
     /// <summary>
     /// Chamado pelo botão de Craft no Inspector (OnClick)
     /// </summary>
@@ -61,6 +63,8 @@ public class CraftarBotao : MonoBehaviour
                 dragScript.itemsScriptables = resultado;
                 dragScript.podeInstanciar = false;
             }
+
+            caldeiraoCraftSprite.MostrarSpriteCraftTemporario();
 
             Debug.Log($"Resultado do craft: {resultado.nameItem}");
 

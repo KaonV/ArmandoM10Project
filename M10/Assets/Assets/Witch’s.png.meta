@@ -1,10 +1,31 @@
 fileFormatVersion: 2
-guid: 6848c5b95a307a043bf3f9fc494f902a
+guid: 051565fe3a8afad4096c05f68e074c84
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2530832133090126899
-    second: "cenario_caldeir\xE3o_cook_0"
+      213: -4201074838695584626
+    second: "Witch\u2019s_0"
+  - first:
+      213: 6156732323541465636
+    second: "Witch\u2019s_1"
+  - first:
+      213: -7396164028780547681
+    second: "Witch\u2019s_2"
+  - first:
+      213: 6891097020677811825
+    second: "Witch\u2019s_3"
+  - first:
+      213: -1171753804200600193
+    second: "Witch\u2019s_4"
+  - first:
+      213: 1449676660861539145
+    second: "Witch\u2019s_5"
+  - first:
+      213: -6200214575340012662
+    second: "Witch\u2019s_6"
+  - first:
+      213: 5918379163411137994
+    second: "Witch\u2019s_7"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +96,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -96,40 +117,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "cenario_caldeir\xE3o_cook_0"
+      name: "Witch\u2019s_0"
       rect:
         serializedVersion: 2
-        x: 567
+        x: 0
         y: 0
-        width: 2740
-        height: 1972
+        width: 902
+        height: 184
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 33c2bf68a625f1320800000000000000
-      internalID: 2530832133090126899
+      spriteID: e8cd7b441b8c2b5c0800000000000000
+      internalID: -4201074838695584626
       vertices: []
       indices: 
       edges: []
@@ -138,7 +146,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cce5b874a12aee241b22632ae33c638c
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +156,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "cenario_caldeir\xE3o_cook_0": 2530832133090126899
+      "Witch\u2019s_0": -4201074838695584626
+      "Witch\u2019s_1": 6156732323541465636
+      "Witch\u2019s_2": -7396164028780547681
+      "Witch\u2019s_3": 6891097020677811825
+      "Witch\u2019s_4": -1171753804200600193
+      "Witch\u2019s_5": 1449676660861539145
+      "Witch\u2019s_6": -6200214575340012662
+      "Witch\u2019s_7": 5918379163411137994
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

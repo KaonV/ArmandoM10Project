@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cenario_bau_click_0: -4992930432966625399
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

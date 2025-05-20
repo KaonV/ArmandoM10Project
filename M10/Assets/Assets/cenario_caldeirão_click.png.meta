@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "cenario_caldeir\xE3o_click_0": 1342426923131381457
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

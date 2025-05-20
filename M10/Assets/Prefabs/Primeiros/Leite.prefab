@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 635737043520892594}
   - component: {fileID: 3425876655380574776}
   - component: {fileID: -9012954718667680225}
+  - component: {fileID: 805533599125591556}
   m_Layer: 5
   m_Name: Leite
   m_TagString: Untagged
@@ -93,3 +94,15 @@ MonoBehaviour:
   itemsScriptables: {fileID: 11400000, guid: acd575bca74e8d044bcfd7cbe56c8cc9, type: 2}
   podeInstanciar: 1
   combinationManager: {fileID: 11400000, guid: 167fd24bd4ef26a47a179d776223d60f, type: 2}
+--- !u!225 &805533599125591556
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2781465651823269284}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

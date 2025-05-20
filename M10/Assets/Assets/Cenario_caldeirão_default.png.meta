@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Cenario_caldeir\xE3o_default_0": -3446140173683839235
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

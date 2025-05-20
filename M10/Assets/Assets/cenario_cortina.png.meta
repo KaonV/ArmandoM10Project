@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cenario_cortina_0: -6897088751479896380
+      cenario_cortina_1: -8640928226921054022
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

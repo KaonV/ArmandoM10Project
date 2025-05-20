@@ -2,6 +2,7 @@
 using UnityEngine.EventSystems;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using static CaldeiraoHover;
 
 public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler, IPointerDownHandler
 {
@@ -11,6 +12,9 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginD
     public ItemsScriptables itemsScriptables;
     [SerializeField] public bool podeInstanciar = true;
     [SerializeField] private CombinationManager combinationManager;
+
+    
+
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -33,6 +37,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginD
 
        
         imageitem.raycastTarget = false;
+        DragManager.ItemSendoArrastado = true;
     }
 
 
@@ -75,11 +80,12 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginD
                 }
             }
 
-           
-            
-           
-        }
 
+
+
+        }
+        DragManager.ItemSendoArrastado = false;
+       
     }
 
 
