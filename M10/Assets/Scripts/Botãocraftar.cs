@@ -44,7 +44,7 @@ public class CraftarBotao : MonoBehaviour
         {
             resultado = combinationManager.receitaPadrao;
 
-            MusicManager.Instance.failAudioSound.Play();
+            //MusicManager.Instance.failAudioSound.Play();
 
             Debug.Log("Combinação inválida. Usando receita padrão.");
         }
@@ -82,7 +82,7 @@ public class CraftarBotao : MonoBehaviour
                 bool added = unlockSlotsManager.AddUnlockedItem(resultado);
                 if (added)
                 {
-                    MusicManager.Instance.newIngredientSound.Play();
+                    //MusicManager.Instance.newIngredientSound.Play();
                     Debug.Log($"Item {resultado.nameItem} adicionado aos slots desbloqueados.");
                 }
                 else
@@ -90,7 +90,7 @@ public class CraftarBotao : MonoBehaviour
                     Debug.LogWarning("Não foi possível adicionar o item aos slots desbloqueados.");
                 }
             }
-                MusicManager.Instance.cookSound.Play();
+                //MusicManager.Instance.cookSound.Play();
                 caldeiraoCraftSprite.MostrarSpriteCraftTemporario();
 
             Debug.Log($"Resultado do craft: {resultado.nameItem}");
