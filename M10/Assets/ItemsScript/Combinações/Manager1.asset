@@ -40,4 +40,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cf8c0f88c286c9846aa56ce678101898, type: 2}
   - {fileID: 11400000, guid: 92d254daf6fbe1240a167e8f4b3e34b7, type: 2}
   - {fileID: 11400000, guid: cf8c0f88c286c9846aa56ce678101898, type: 2}
+  - {fileID: 11400000, guid: 95f67faf65e37e04c9e3c0671f37e0b4, type: 2}
+  - {fileID: 11400000, guid: 1b4bd0bc9cff7b64094c46ed4a7258e2, type: 2}
   receitaPadrao: {fileID: 11400000, guid: a3488ae9f843e7f4d9eae92b6abf8712, type: 2}

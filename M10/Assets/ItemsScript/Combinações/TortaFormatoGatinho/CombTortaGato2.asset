@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: CombTortaGato2
   m_EditorClassIdentifier: 
   itemA: {fileID: 11400000, guid: b48ea3aeb00ba6748bee45212cb1b86e, type: 2}
-  itemB: {fileID: 11400000, guid: ac7090edcb11a4a4da629c3e8761d33d, type: 2}
+  itemB: {fileID: 11400000, guid: 08109fc522721fe45b46578b74eb6df5, type: 2}
   resultado: {fileID: 11400000, guid: 64a4350a3a440274cb867d09f2f926d5, type: 2}

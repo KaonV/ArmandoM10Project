@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cenario_barra_default_0: 5528106251025257311
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

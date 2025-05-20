@@ -37,7 +37,7 @@ public class SlidingPanelHover : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     private IEnumerator DelayedClose()
     {
-        yield return new WaitForSeconds(1f); // pequeno delay
+        yield return new WaitForSeconds(0.1f); // pequeno delay
         if (!isPointerInside)
         {
             animator.SetBool("Aberto", false);

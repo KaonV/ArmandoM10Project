@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72f14c83961fbd648bb55fc7582b5476, type: 3}
-  m_Name: CombTortaGato1
+  m_Name: CombTortaDouraGato
   m_EditorClassIdentifier: 
-  itemA: {fileID: 11400000, guid: 08109fc522721fe45b46578b74eb6df5, type: 2}
-  itemB: {fileID: 11400000, guid: b48ea3aeb00ba6748bee45212cb1b86e, type: 2}
-  resultado: {fileID: 11400000, guid: 64a4350a3a440274cb867d09f2f926d5, type: 2}
+  itemA: {fileID: 11400000, guid: 53b756d084496614a81ae233021a079c, type: 2}
+  itemB: {fileID: 11400000, guid: 64a4350a3a440274cb867d09f2f926d5, type: 2}
+  resultado: {fileID: 11400000, guid: c3eda67483d5b8244b2668db41a7c90d, type: 2}
