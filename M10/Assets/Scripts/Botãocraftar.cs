@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CraftarBotao : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class CraftarBotao : MonoBehaviour
     public CaldeiraoSlot caldeiraoSlot;       // (opcional, se você usa em outro contexto)
 
     public CaldeiraoHover caldeiraoCraftSprite;
+
+    public ItemsScriptables victoryRecipe;
 
 
     public UnlockSlotsManager unlockSlotsManager;
@@ -90,8 +93,8 @@ public class CraftarBotao : MonoBehaviour
                     Debug.LogWarning("Não foi possível adicionar o item aos slots desbloqueados.");
                 }
             }
-                MusicManager.Instance.cookSound.Play();
-                caldeiraoCraftSprite.MostrarSpriteCraftTemporario();
+            MusicManager.Instance.cookSound.Play();
+            caldeiraoCraftSprite.MostrarSpriteCraftTemporario();
 
             Debug.Log($"Resultado do craft: {resultado.nameItem}");
 
@@ -110,6 +113,17 @@ public class CraftarBotao : MonoBehaviour
             {
                 Debug.Log($"Receita {resultado.nameItem} excluída do Livro de Receitas.");
             }
+
+
+            if (resultado == victoryRecipe)
+            {
+                SceneManager.LoadScene("WinScene");
+                Debug.Log("=== RECEITA FINAL ALCANÇADA! VOCÊ GANHOU! ===");
+
+
+
+            }
+
         }
     }
 }

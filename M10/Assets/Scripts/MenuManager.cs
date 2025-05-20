@@ -22,6 +22,13 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    public void MenuExit()
+    {
+        
+            SceneManager.LoadScene("Menu");
+        
+    }
+
 
     public void Credits()
     {
